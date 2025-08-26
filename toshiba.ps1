@@ -2,7 +2,7 @@
 # Version adaptée pour exécution via irm | iex
 
 # URL de base où sont hébergés les fichiers du pilote
-$baseUrl = "https://asstec3.fr"  # À remplacer par votre URL réelle
+$baseUrl = "https://votre-serveur.fr"  # À remplacer par votre URL réelle
 
 # Créer un répertoire temporaire pour les fichiers
 $tempDir = Join-Path $env:TEMP "ToshibaInstall_$(Get-Random)"
