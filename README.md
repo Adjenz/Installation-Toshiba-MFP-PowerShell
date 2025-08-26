@@ -1,3 +1,5 @@
+Script créé par IA avec l'aide de [Claude](https://claude.ai).
+
 ## Mise à jour du script :
 
 ### 1. __Téléchargement automatique des pilotes__
