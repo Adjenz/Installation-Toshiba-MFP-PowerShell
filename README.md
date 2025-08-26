@@ -1,3 +1,52 @@
+## Mise à jour du script :
+
+### 1. __Téléchargement automatique des pilotes__
+
+- Le script télécharge automatiquement `toshiba.zip` depuis votre serveur
+- Utilise un dossier temporaire unique (`%TEMP%\ToshibaInstall_*`)
+- Extrait automatiquement les fichiers nécessaires
+
+### 2. __Gestion des chemins__
+
+- Plus de dépendance aux chemins locaux
+- Tous les chemins sont calculés dynamiquement
+- Nettoyage automatique des fichiers temporaires
+
+### 3. __Vérification des privilèges__
+
+- Détecte si l'utilisateur est administrateur
+- Affiche la commande à exécuter si pas admin
+- Message clair avec l'URL correcte
+
+### 4. __Configuration requise__
+
+Vous devez :
+
+1. Modifier la ligne 5 du script : remplacer `https://mon-serveur` par votre URL réelle
+
+2. Héberger sur votre serveur :
+
+   - `toshiba.ps1` (le nouveau script)
+   - `toshiba.zip` (archive contenant le dossier UNI avec les pilotes)
+
+### 5. __Utilisation__
+
+```powershell
+# En tant qu'administrateur
+irm https://votre-serveur/toshiba.ps1 | iex
+```
+
+Le script conserve toutes les fonctionnalités originales :
+
+- Installation multiple d'imprimantes
+- Validation des adresses IP
+- Vérification de l'environnement
+- Messages stylisés et barre de progression
+- Gestion des erreurs détaillée
+
+L'avantage principal est le déploiement centralisé : vous pouvez mettre à jour le script sur le serveur et tous les utilisateurs bénéficieront automatiquement de la dernière version.
+
+
 # Script d'Installation Imprimante Toshiba Universal Printer 2
 
 Ce script PowerShell automatise l'installation d'imprimantes réseau Toshiba utilisant le pilote Universal Printer 2. Il offre une interface interactive simple et sécurisée pour installer une ou plusieurs imprimantes en une seule session.
